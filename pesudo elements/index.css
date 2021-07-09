@@ -1,0 +1,42 @@
+/*pseudo elements ::before ::after CONTENT not element content:'' REQUIRED
+img does not work*/
+
+/*Como se observa, puedo transformar lo que agrego en un bloque.  Recordemos que el bloque va a ocupar todo el ancho posible y va
+a comenzar una nueva linea*/
+
+p::before {
+  content: "hello ";
+  font-size: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+  display: block;
+  background: green;
+}
+/*Tambien se ppuede decirle que despliegue un bloque, no poniendo nada en el content. REcorcemos que si fuera un display block, el bloque
+comenzaria una nueva linea como lo hacen por defecto. El inline block me permite insertar un bloque en la misma linea*/
+p::after {
+  content: "";
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  background: chartreuse;
+}
+
+/*topic aparte*/
+
+div {
+  width: 50vw;
+  margin: 100px auto;
+  border: 2px solid black;
+}
+img {
+  width: 100%;
+  display: block;
+}
+/*Metiendo la imagen en un div, podemos darle una medida al div que queramos y que sea responisve, y despues decirle a la imagen que ocupe
+ el 100% de ese div. Si le damos with 100% va a ocupar el 100% del div porque es el elemento padre que la contiene.
+ Luego le damos un display block para que elimine un espacio que queda por debajo. Ya que al comportarse como bloque va a ocupar todo el 
+ elemento que la contiene*/
+/*Tambien puedo agregarle algun parrafo o titulo y se va a a ver correctamente dentro del div*/

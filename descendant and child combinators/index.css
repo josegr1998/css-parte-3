@@ -1,0 +1,58 @@
+/*Descendant and child combinators*/
+
+/*Todos los h1 que sean descendientes de un div, es decir que tengan de ancestros a un div van a ser afectados. Por eso en el ejemplo
+el cambio que voy a realizar afectara ambos h1*/
+
+div h1 {
+  color: red;
+}
+/*Para seleccionar solo el h1 que es un hijo DIRECTO del div, debo aplicar la siguiente linea:*/
+
+div > h1 {
+  color: blue;
+}
+
+/*Sirve de igual manera para las clases y los id's, que son mas especificos*/
+/*EJ:
+.header h1{
+    color: blue;  pintaria ambos titulos
+}*/
+
+/*
+.header > h1{
+    color:red; pintaria solo al primer titulo, que es hijo directo del div con la clase header
+}*/
+
+/* ::first-line  ::first-letter, sirven para lo que su nombre dice*/
+
+p::first-line {
+  font-weight: bold;
+}
+p::first-letter {
+  font-size: 30px;
+  color: red;
+}
+
+/*HOVER AND STUFF*/
+
+p:hover {
+  color: blue;
+}
+.div2:hover {
+  background-color: yellow;
+  font-size: 20px;
+  color: blue;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/*Los links pueden ser :link(link general), :visited (muestra los links que fueron visitados, se pueden cambiar tantas 
+propiedades como se quiera), :hover , :active (afecta al link MIENTRAS lo estamos CLICKEANDO)*/
+
+a:link {
+  color: aqua; /*Sirve para editar las propiedades de los links o un link especifico dandole una clase a link que queremos editar*/
+}
+a:active {
+  color: red;
+}

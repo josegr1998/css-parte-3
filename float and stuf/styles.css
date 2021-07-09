@@ -1,0 +1,77 @@
+/*por defecto el valor de float es none*/
+
+.banner {
+  border: 4px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/*La propiedad float literalmente hace que el elemento flote hacia la direccion que elegimos.*/
+
+img {
+  float: right;
+}
+
+p {
+  clear: right; /*Para que el parrafo respete la posicion de la imagen y no se mezcle, hay que usar la propiedad clear con el lado de la imagen*/
+}
+
+/*Ahora veamos la siguiente situacion con dos imagenes*/
+/*Como ahora tengo dos imagenes, una a la izquierda y otra a la derecha, le tengo que decir al parrafo que respete la posicion de ambas
+con la propiedad clear both, usandola para referirme a ambas imagenes*/
+
+.situacion2 {
+  border: 4px solid black;
+  padding 10px;
+}
+.one{
+    float: right;
+}
+
+.two{
+    float: left;  
+   
+}
+.parrafo{
+    clear: both;
+}
+
+/*OVERFLOW: Cuando un elemento se sale del div o bloque que lo contiene (Se puede notar bien cuando eso pasa poniendo un borde) Se puede usar la
+propiedad overflow. Con su valor hidden,  ocultamos todo exceso de elementos que se salgan del bloque*/
+/*Ej: (comentar la situacion de arriba para pdoer verlo)*/
+
+/*.situacion2 {
+  border: 4px solid black;
+  padding 10px;
+  width: 400px;
+  overflow: hidden;
+
+}
+.one{
+    float: right;
+}
+
+.two{
+    float: left;
+    width: 700px;
+   
+}
+.parrafo{
+    clear: both;
+}*/
+/*Si quiero que la foto quede al lado del parrafo simplemente puedo dejarlas como estaban:*/
+
+.situacion3{
+    border: 4px solid black;
+    margin-top: 20px;
+    height: 200px;
+    padding: 20px;
+}
+
+.three{
+    float: right;
+    margin-left: 40px;
+}
+.parrafo3{
+    clear: none; /*Recordemos que este es el valor por defecto*/
+}

@@ -1,0 +1,50 @@
+/* Media Queries
+Responsive design
+Style elements with different screen sizes
+min width: -- Starting from
+max width: -- Up to
+Mobile firts */
+
+body {
+  background: yellow;
+}
+.banner {
+  background: blue;
+}
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: white;
+}
+
+/* Lo que estoy haciendo con @media, es decirle que A PARTIR de 576px de ancho, los elementos que seleccione van a tener las propiedades
+descriptas*/
+/*Todas las propiedades que no se sobreescriban se quedaran como estaban*/
+/*Se pueden agregar tantos media query como se desee*/
+
+@media screen and (min-width: 576px) {
+  body {
+    background: red;
+  }
+  .banner {
+    background: yellow;
+  }
+  h1 {
+    color: black;
+  }
+}
+/*@media screen and (min-width: 776px) {
+  body {
+    background: blue;
+  }
+  .banner {
+    background: yellow;
+  }
+  h1 {
+    color: green;
+  }
+}*/
+
+/* z-index  z-axis
+position static does not work*/

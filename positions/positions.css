@@ -1,0 +1,50 @@
+div {
+  border: 4px solid red;
+  background-color: yellow;
+  margin-top: 40px;
+}
+.one {
+  background-color: blue;
+}
+.two {
+  background-color: green;
+}
+
+.special {
+  background-color: lightcoral;
+  font-size: 20px;
+}
+/*Position static es el normal flow of document, la forma nomral en la que todos los elementos se displean*/
+/*Position relative*/
+
+.bloque {
+  height: 400px;
+  overflow: hidden;
+}
+/*como se observa, position relative toma algun borde que elijamos del elemento padre, y mueve el elemento
+ que tiene sleccionado away de lo
+que elegimos, en este caso el top. (devuelta, seria el top del elemento padre, que es el div con clase .bloque)
+.three en este caso es un parrafo*/
+
+.three {
+  background-color: red;
+  position: relative;
+  top: 200px;
+  left: 40px;
+}
+/*position absolute: Se mueve respcto al ancestro mas cercano con un position relative. Si no lo encuentra, se mueve respecto al body*/
+
+.specialone {
+  background-color: grey;
+  position: absolute;
+  top: 20px;
+}
+/*ver en el ejemplo*/
+/*Position fixed: Es relativa al documento entero, (a los bordes de la pantalla me imagino) y deja el elemento fijo*/
+button {
+  color: red;
+  background-color: green;
+  font-size: 40px;
+  position: fixed;
+  top: 20px;
+}

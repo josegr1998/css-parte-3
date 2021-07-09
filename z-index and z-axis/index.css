@@ -1,0 +1,36 @@
+img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+/*Puedo poner position absolute en img, que va a estar en relacion NO del body, SI del div de clase banner, ya que es un elemento padre el cual tiene
+un position relative. Una vez hecho eso, puedo agarrar imagen por imagen y describir individualmente la posicion que quiero que tengan.
+Recordemos que va a ser respecto al div ya que es un elemento padre que tiene un position relative*/
+.banner {
+  margin: 20px;
+  width: 70vw;
+  height: 70vh;
+  border: 5px solid red;
+  position: relative;
+}
+
+.one {
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+.two {
+  top: 10%;
+  left: 10%;
+  z-index: 100;
+}
+.three {
+  top: 20%;
+  left: 20%;
+  z-index: 0;
+}
+/*La razon por la cual la 3er imagen se ve mas cerca, es porque era la tercera en linea*/
+/*z-index nos sirve para cambiar eso*/
+/*el valor de z-index puede ser negativo
+La imagen que tenga el mayor valor de z-index es la que se vera mas cerca
+No funciona si las iamgenes tienen position static*/
